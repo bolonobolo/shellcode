@@ -1,0 +1,4 @@
+
+all: 
+	cc wasm.c -DUNIX -DWASM -o wasm 
+	cc wexp.c -DUNIX -o wexp
